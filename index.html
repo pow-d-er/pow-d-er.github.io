@@ -1,111 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>z 1</title>
-	<style>
-		body { margin: 0; padding: 0; font-size: 0; }
-		canvas { width: 100%; height: 100%; }
-	</style>
+    <meta charset="UTF-8">
+    <title>Wilgi</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+
+    <script type="text/javascript">
+
+        jQuery(function($)
+            {
+                $.scrollTo(0);
+                $('#link0').click(function(e) { e.preventDefault(); $.scrollTo(0 , 500); });
+                $('#link1').click(function(e) { e.preventDefault(); $.scrollTo($('#page1'), 500); });
+                $('#link2').click(function(e) { e.preventDefault(); $.scrollTo($('#page2'), 500); });
+                $('#link3').click(function(e) { e.preventDefault(); $.scrollTo($('#page3'), 500); });
+                $('#link4').click(function(e) { e.preventDefault(); $.scrollTo($('#page4'), 500); });
+                $('#link5').click(function(e) { e.preventDefault(); $.scrollTo($('#page5'), 500); });
+                $('#link6').click(function(e) { e.preventDefault(); $.scrollTo($('#page6'), 500); });
+            }
+
+        );
+
+
+    </script> <!-- scroll to -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var navHeight = $('.navbar').height();
+            var divHeight = $('.jumbotron').height();
+            var divWidth = $('.jumbotron').width();
+            $('#first').css("height", divHeight);
+            $('#first').css("width", divWidth);
+            $('#second').css("height", divHeight);
+            $('#second').css("width", divWidth);
+            $('#third').css("height", divHeight);
+            $('#third').css("width", divWidth);
+            $('#fourth').css("height", divHeight);
+            $('#fourth').css("width", divWidth);
+            $('#fifth').css("height", divHeight);
+            $('#fifth').css("width", divWidth);
+            $('#sixth').css("height", divHeight);
+            $('#sixth').css("width", divWidth);
+            $('#page2').css("padding-top", navHeight * 1.5);
+            $('#page3').css("padding-top", navHeight * 1.5);
+            $('#page4').css("padding-top", navHeight * 1.5);
+            $('#page5').css("padding-top", navHeight * 1.5);
+            $('#page6').css("padding-top", navHeight * 1.5);
+
+            $('.navbar-nav a').click(function(){
+                $('.navbar-collapse').collapse('hide');
+            });
+
+        });
+    </script> <!-- get right padding -->
+
 </head>
 <body>
-<script src="js/three.min.js"></script>
-<script>
-	var WIDTH = window.innerWidth;
-	var HEIGHT = window.innerHeight;
 
-document.addEventListener('keydown',onDocumentKeyDown,false);
-document.addEventListener('keyup',onDocumentKeyUp,false);
-
-
-
-var speedX = 0;
-var speedZ = 0;
-var t = 0.99;
-
-
-function onDocumentKeyUp(event){
-	event = event || window.event;
-	var keycode = event.keyCode;
-	switch(keycode){
-	case 37:
-	console.log("left down");
-	break;
-	case 38 : console.log("up down"   );
-	break;
-	case 39 : console.log("right down");
-	break;
-	case 40 : console.log("down down" );
-	break;
-	}
-}
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+            <a id="link0" class="navbar-brand" href="#">ElektryczneWilgi</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a id="link1" href="#">O elektrowniach jądrowych</a></li>
+                <li><a id="link2" href="#">Jakaś Mapka</a></li>
+                <li><a id="link3" href="#">Zalety</a></li>
+                <li><a id="link4" href="#">Wady</a></li>
+                <li><a id="link5" href="#">Sytuacja w Polsce</a></li>
+                <li><a id="link6" href="#">Nasza opinia</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
 
-function onDocumentKeyDown(event){
-event = event || window.event;
-var keycode = event.keyCode;
-switch(keycode){
-	case 37 : console.log("left up" );
-	speedX -= 0.15;
-	break;
-	case 38 : console.log("up up"   );
-	speedZ += 0.15;
-	break;
-	case 39 : console.log("right up");
-	speedX += 0.15;
-	break;
-case 40 : console.log("down up" );
-	speedZ -= 0.15;
-	break;
-}
-}
+    <div class="container-fluid">
+        <div class="jumbotron" id="page1">
+            <img id="first" src="img/1.png" class="img-responsive" alt="Cinque Terre">
+        </div>
+    </div>
+
+     <div class="container-fluid">
+        <div class="jumbotron" id="page2">
+            <img id="second" src="img/2.png" class="img-responsive" alt="Cinque Terre">
+        </div>
+    </div>
+
+     <div class="container-fluid">
+        <div class="jumbotron" id="page3">
+            <img id="third" src="img/3.png" class="img-responsive" alt="Cinque Terre">
+        </div>
+    </div>
+
+     <div class="container-fluid">
+        <div class="jumbotron" id="page4">
+            <img id="fourth" src="img/4.png" class="img-responsive" alt="Cinque Terre">
+        </div>
+    </div>
+
+     <div class="container-fluid">
+        <div class="jumbotron" id="page5">
+            <img id="fifth" src="img/5.png" class="img-responsive" alt="Cinque Terre">
+        </div>
+    </div>
+
+     <div class="container-fluid">
+        <div class="jumbotron" id="page6">
+            <img id="sixth" src="img/6.png" class="img-responsive" alt="Cinque Terre">
+        </div>
+    </div>
 
 
-	var renderer = new THREE.WebGLRenderer({antialias:true});
-	renderer.setSize(WIDTH, HEIGHT);
-	renderer.setClearColor(0xDDDDDD, 1);
-	document.body.appendChild(renderer.domElement);
-
-	var scene = new THREE.Scene();
-
-	var camera = new THREE.PerspectiveCamera(50, WIDTH/HEIGHT, 0.1, 10000);
-	camera.position.z = 50;
-	scene.add(camera);
-
-	var cubeGeometry = new THREE.CubeGeometry(10, 10, 10);
-	var phongMaterial = new THREE.MeshPhongMaterial({color: 0xFF0000});
-	var cube = new THREE.Mesh(cubeGeometry, phongMaterial);
-	cube.position.x = -25;
-	cube.rotation.set(0.4, 0.2, 0);
-	scene.add(cube);
-
-	var light = new THREE.PointLight(0xFFFFFF);
-	light.position.set(-10, 15, 50);
-	scene.add(light);
 
 
-	function render() {
-
-		if(cube.position.x < -39 || cube.position.x > 39){
-			speedX = -speedX;
-		}
-
-		if(cube.position.z > 35 || cube.position.z < -400){
-			speedZ = -speedZ;
-		}
-		speedX = speedX * t;
-		speedZ  = speedZ * t;
-		cube.rotation.y += 0.01;
-		cube.rotation.x += 0.01;
-		cube.position.z += speedZ;
-		cube.rotation.x += speedZ/20;
-		cube.position.x += speedX;
-		cube.rotation.y += speedX/20;
-		console.log("Z: " + cube.position.z + "X: " + cube.position.x + "speedZ: " + speedZ + "speedX: " +speedX);
-		requestAnimationFrame(render);
-		renderer.render(scene, camera);
-	}
-	render();
-</script>
 </body>
 </html>
