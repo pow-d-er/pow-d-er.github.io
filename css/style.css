@@ -1,9 +1,14 @@
-.jumbotron{
-    height: 100vh;
-}
 body {
     overflow-y:hidden;
     overflow-x:hidden;
 }
 
+#first{
+    margin-top: 5vh;
+    width: 90vw;
+    height: 40vh;
+}
 
+.full-height{
+    height: 100vh;
+}
