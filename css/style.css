@@ -1,14 +1,25 @@
 body {
-    overflow-y:hidden;
-    overflow-x:hidden;
+    overflow: hidden;
+    background-color:#FF918E !important;
 }
 
-#first{
-    margin-top: 5vh;
-    width: 90vw;
-    height: 40vh;
+.jumbotron {
+        background-color:transparent !important; 
+}
+
+.img-responsive{
+    max-height: 80vh;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
 }
 
 .full-height{
     height: 100vh;
 }
+
