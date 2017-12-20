@@ -22,7 +22,7 @@
                 $('#link3').click(function(e) { e.preventDefault(); $.scrollTo($('#page3'), 500); });
                 $('#link4').click(function(e) { e.preventDefault(); $.scrollTo($('#page4'), 500); });
                 $('#link5').click(function(e) { e.preventDefault(); $.scrollTo($('#page5'), 500); });
-                $('#link6').click(function(e) { e.preventdefault(); $.scrollto($('#page6'), 500); });
+                $('#link6').click(function(e) { e.preventDefault(); $.scrollTo($('#page6'), 500); });
             }
 
         );
@@ -39,8 +39,7 @@
             $('#page4').css("padding-top", navHeight * 1.5);
             $('#page5').css("padding-top", navHeight * 1.5);
             $('#page6').css("padding-top", navHeight * 1.5);
-
-            $('.navbar-nav a').click(function(){
+$('.navbar-nav a').click(function(){
                 $('.navbar-collapse').collapse('hide');
             });
 
@@ -74,43 +73,39 @@
 </nav>
 
 
-    <div class="container-fluid full-height">
-        <div class="jumbotron" id="page1">
-            <img id="first" src="img/elektrownia.jpg" class="center-block"> 
-        </div>
-        <div>
-            <div class="jumbotron" id="page1">
-            </div>
+    <div class="container-fluid ">
+        <div class="jumbotron full-height" id="page1">
+            <img id="first" src="img/1.png" class="img-responsive center-block vertical-center">
         </div>
     </div>
 
-     <div class="container-fluid full-height">
-        <div class="jumbotron" id="page2">
-            <img id="second" src="img/2.png" class="img-responsive" alt="Cinque Terre">
+     <div class="container-fluid ">
+        <div class="jumbotron full-height" id="page2">
+            <img id="second" src="img/2.png" class="img-responsive center-block vertical-center"> 
         </div>
     </div>
 
-     <div class="container-fluid full-height">
-        <div class="jumbotron" id="page3">
-            <img id="third" src="img/3.png" class="img-responsive" alt="Cinque Terre">
+     <div class="container-fluid ">
+        <div class="jumbotron full-height" id="page3">
+            <img id="third" src="img/3.png" class="img-responsive center-block vertical-center">
         </div>
     </div>
 
-     <div class="container-fluid full-height">
-        <div class="jumbotron" id="page4">
-            <img id="fourth" src="img/4.png" class="img-responsive" alt="Cinque Terre">
+     <div class="container-fluid ">
+        <div class="jumbotron full-height" id="page4">
+            <img id="fourth" src="img/4.png" class="img-responsive center-block vertical-center">
         </div>
     </div>
 
-     <div class="container-fluid full-height">
-        <div class="jumbotron" id="page5">
-            <img id="fifth" src="img/5.png" class="img-responsive" alt="Cinque Terre">
+     <div class="container-fluid ">
+        <div class="jumbotron full-height" id="page5">
+            <img id="fifth" src="img/5.png" class="img-responsive center-block vertical-center">
         </div>
     </div>
 
-     <div class="container-fluid full-height">
-        <div class="jumbotron" id="page6">
-            <img id="sixth" src="img/6.png" class="img-responsive" alt="Cinque Terre">
+     <div class="container-fluid ">
+        <div class="jumbotron full-height" id="page6">
+            <img id="sixth" src="img/6.png" class="img-responsive center-block vertical-center">
         </div>
     </div>
 
